@@ -1,12 +1,14 @@
+//@ts-ignore
+"use client"
 import { useEffect, useState } from "react";
 
-export default function useBlogApi(id) {
+export default  function useBlogApi(id) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch(`https://dev.to/api/articles/${id || ""}`);
+        const res = await fetch(`https://dev.to/api/articles/${id}`);
         const data = await res.json();
         setPosts(data);
       } catch (error) {
@@ -16,6 +18,6 @@ export default function useBlogApi(id) {
 
     fetchData();
   }, []);
-
+ console.log(posts)
   return [posts] 
 } 

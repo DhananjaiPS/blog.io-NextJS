@@ -1,10 +1,13 @@
-"use client"
+'use client'
+//@ts-ignore
 import { use } from "react"
 import useBlogApi from "@/hooks/useblogApi";
 export default function page({ params }) {
-    const { id } = use(params)
+    const { id } = params
     const [blogData] = useBlogApi(id);
-    
+    if (!blogData) {
+        return <div className="text-center text-gray-500">Loading...</div>;
+    }
 
     return (
         <div>

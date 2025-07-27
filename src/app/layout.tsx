@@ -31,6 +31,7 @@ export default function RootLayout({
         <Navbar />
         {/* <Hero /> */}
         {children}
+        <script src="https://kit.fontawesome.com/019ba0295c.js" ></script>
       </body>
     </html>
   );

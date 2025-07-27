@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,7 +17,7 @@ export default function Contact() {
     e.preventDefault();
     console.log("Query Submitted:", formData);
 
-    // ✅ In real use, send to backend or email service like EmailJS or Formspree
+    
     alert("Thank you for contacting us!");
     setFormData({ name: "", email: "", message: "" });
   };
@@ -25,7 +27,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-xl">
         <h1 className="text-3xl font-bold text-blue-500 mb-6">Contact Us</h1>
 
-        {/* Contact Form */}
+        
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block mb-1 font-semibold text-gray-700">Name</label>
@@ -71,15 +73,15 @@ export default function Contact() {
           </button>
         </form>
 
-        {/* Divider */}
+        
         <div className="border-t my-8"></div>
 
-        {/* Other Contact Options */}
+        
         <div>
           <h2 className="text-xl font-semibold mb-3 text-gray-800">Other Ways to Connect</h2>
-          <ul className="space-y-3 text-gray-700">
+          <ul className="space-y-3 text-gray-700 ">
             <li>
-              📧 Email:{" "}
+              <i class="fa-brands fa-google text-2xl text-black pr-4"></i> Email:{" "}
               <a
                 href="mailto:your.email@example.com"
                 className="text-blue-500 hover:underline"
@@ -88,7 +90,7 @@ export default function Contact() {
               </a>
             </li>
             <li>
-              💼 LinkedIn:{" "}
+              <i class="fa-brands fa-linkedin text-2xl text-black pr-4"></i>
               <a
                 href="https://linkedin.com/in/yourprofile"
                 target="_blank"
@@ -98,8 +100,7 @@ export default function Contact() {
               </a>
             </li>
             <li>
-              🐦 Twitter:{" "}
-              <a
+              <i className="fa-brands fa-square-twitter text-2xl text-black pr-4"></i><a
                 href="https://twitter.com/yourusername"
                 target="_blank"
                 className="text-blue-500 hover:underline"
@@ -108,7 +109,7 @@ export default function Contact() {
               </a>
             </li>
             <li>
-              🌐 GitHub:{" "}
+              <i class="fa-brands fa-github text-2xl text-black pr-4"></i> GitHub:{" "}
               <a
                 href="https://github.com/yourgithub"
                 target="_blank"

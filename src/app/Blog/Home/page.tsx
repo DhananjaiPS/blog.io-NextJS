@@ -1,4 +1,6 @@
+//@ts-ignore
 "use client";
+
 import { useEffect, useState } from "react";
 import Loading from "@/app/componets/Loading"
 export default function Home() {
@@ -32,7 +34,7 @@ export default function Home() {
 
       {/* Loading */}
       {loading && (
-        <div>
+        <div className="flex flex-wrap justify-center items-center ">
 
             {loadingnumber.map((item) => (
                      <Loading/>
@@ -57,7 +59,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-4 line-clamp-3 text-[2vh]">{post.body}</p>
                 <div className="mt-auto flex">
                   <p className="text-[2px] font-medium mb-1 text-gray-700 pr-2 text-[4vh]">Tags:</p>
-                  <div className="flex flex-wrap gap-2 itmes-center text-sm">
+                <div className="flex flex-wrap gap-2 itmes-center text-sm">
                     {post.tags.map((tag, index) => (
                       <span
                         key={index}
